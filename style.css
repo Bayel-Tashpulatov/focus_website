@@ -24,7 +24,7 @@ body {
     position: relative;
 }
 
-#bg-overlay { 
+#bg-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -700,5 +700,109 @@ input[type=number] {
     .glass-panel {
         padding: 20px;
         width: 95%;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    #timer-display {
+        font-size: 5.5rem;
+        margin: 5px 0;
+    }
+
+    #big-clock-display {
+        font-size: 5rem;
+    }
+
+    .glass-panel {
+        width: 95%;
+        padding: 25px 15px;
+        margin: 10px auto;
+        border-radius: 30px;
+    }
+
+    header {
+        padding: 15px 20px;
+        margin-bottom: 0;
+    }
+
+    .brand-logo {
+        font-size: 1.2rem;
+    }
+
+    #start-btn {
+        padding: 15px 30px;
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+    .timer-controls {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .time-settings-inline {
+        gap: 10px;
+        font-size: 0.9rem;
+    }
+
+    .input-group input {
+        font-size: 1rem;
+        width: 35px;
+    }
+
+    #sound-dock-container {
+        padding-bottom: 20px;
+    }
+
+    #sound-dock {
+        max-width: 100%;
+        border-radius: 20px 20px 0 0;
+        border-bottom: none;
+        padding: 15px;
+        gap: 10px;
+
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    #sound-dock::-webkit-scrollbar {
+        display: none;
+    }
+
+    .sound-card {
+        min-width: 65px;
+        padding: 15px 10px;
+    }
+
+    .icon-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .focus-input-wrapper input {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .app-footer {
+        display: none;
+    }
+}
+
+@media (max-height: 700px) {
+    .glass-panel {
+        padding: 15px;
+        margin: 5px auto;
+    }
+
+    #timer-display {
+        font-size: 4rem;
+    }
+
+    header {
+        padding: 10px 20px;
     }
 }
