@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yecci - Focus Space</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="bg-overlay"></div>
+
+    <div id="visual-layer">
+        <div id="rain-container"></div>
+        <div id="fire-container"></div>
+        <div id="wind-overlay"></div>
+        <div id="forest-container"></div>
+        <div id="cafe-container"></div>
+    </div>
+
+    <main id="interface-layer">
+
+        <header class="top-bar">
+            <div class="brand-logo">YECCI</div>
+
+            <div class="header-controls">
+                <button id="lang-btn" onclick="toggleLanguage()">EN</button>
+                <div id="mini-clock">00:00</div>
+            </div>
+        </header>
+
+        <section class="glass-panel">
+
+            <div class="view-switcher">
+                <button class="view-btn active" onclick="switchView('timer')" data-i18n="pomodoro">Pomodoro</button>
+                <button class="view-btn" onclick="switchView('clock')" data-i18n="clock_view">Clock</button>
+            </div>
+
+            <div id="view-timer">
+
+                <div id="timer-display">25:00</div>
+
+                <div class="time-settings-inline">
+                    <div class="input-group">
+                        <span data-i18n="focus_label">focus</span> <input type="number" id="focus-duration" value="25"
+                            min="1" max="90">
+                        <span data-i18n="min">min</span>
+                    </div>
+
+                    <div class="divider">/</div>
+
+                    <div class="input-group">
+                        <span data-i18n="break_label">break</span>
+                        <input type="number" id="break-duration" value="5" min="1" max="30">
+                        <span data-i18n="min">min</span>
+                    </div>
+                </div>
+
+                <div class="timer-meta">
+                    <span id="mode-label" data-i18n="ready">Ready to Focus</span>
+                    <button id="tick-toggle" title="Ticking Sound" onclick="toggleTicking()">
+                        🔇 <span data-i18n="tick">Tick</span>
+                    </button>
+                </div>
+
+                <div class="timer-controls">
+                    <button id="start-btn" data-i18n="start">START SESSION</button>
+                    <button id="reset-btn" class="secondary" title="Reset">↻</button>
+                </div>
+            </div>
+
+            <div id="view-clock" style="display: none;">
+                <div id="big-clock-display">00:00</div>
+                <div id="date-display">Monday, 21 Dec</div>
+            </div>
+
+            <div class="focus-input-wrapper">
+                <input type="text" id="focus-input" placeholder="What is your main goal?" autocomplete="off">
+            </div>
+
+        </section>
+
+        <section id="sound-dock-container">
+            <div id="sound-dock">
+            </div>
+        </section>
+
+        <footer class="app-footer">
+            <p><span data-i18n="dev">Dev</span>: <span class="author-name">Bayel Tashpulatov</span></p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
